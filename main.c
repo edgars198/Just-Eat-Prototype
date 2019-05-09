@@ -107,7 +107,7 @@ void custMenu(){
 		//displays the menu of desired restaurant
 		viewMenu(path);
 
-		//lets the user choose weather to go back and choose another restaurant
+		//lets the user choose whether to go back and choose another restaurant
 		printf("------------------------\n");
 		printf("1 - choose a meal\n");
 		printf("2 - go back\n");
@@ -209,7 +209,7 @@ void purchaseFood(char path[100]){
 	printf("Choice: ");
 	scanf("%d", &purchase);
 
-	//lets the user know that purchase has been comfirem
+	//lets the user know that purchase has been confirmed
 	if(purchase == 1){
 		printf("\nThank you for your purchase, we have your IP address and we will deliver to your door If you want to change the address please get in contanct with the restaurant\n");
 	}
@@ -244,22 +244,22 @@ void createAcc(){
 	openFile("accounts.txt","a+");
 	closeFile(Ptr);
 
-	//gets the user's name
+	//gets user's name
 	printf("Account name - ");
 	scanf("%s", creat.name);
 
-	//checks if the name has been taken, if so keeps asking for other one
+	//checks if the name has been taken, if so asks for another one
 	while(nameCheck(creat.name)){
 		printf("this name has been used, please choose another one\n");
 		printf("Account name - ");
 		scanf("%s", creat.name);
 	}
 
-	//gets the user's password
+	//gets user's password
 	printf("Password - ");
 	scanf("%s", creat.password);
 
-	//gets the user's type
+	//gets user's type
 	printf("------------------------\n");
 	printf("1 - Customer\n");
 	printf("2 - Restaurant\n");
@@ -267,7 +267,7 @@ void createAcc(){
 	printf("Choice: ");
 	scanf("%d", &type);
 
-	//makes sure that the user has entered the right values
+	//makes sure user has entered the right values
 	while(!(type == 1 || type == 2)){
 		printf("Error!!! enter '1' or '2'\n");
 		printf("Choice: ");
